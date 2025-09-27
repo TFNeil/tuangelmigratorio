@@ -16,56 +16,56 @@ const servicios = [
   {
     title: "Estrategia de Visas",
     href: "/services/visa-strategy",
-    img: "/images/services/visa-strategy.png",
+    img: "/images/services/visa-strategy.jpg",
     blurb:
       "Planes claros y paso a paso según tu objetivo: estudio, trabajo, familia o negocios.",
   },
   {
     title: "Permisos de Estudio",
     href: "/services/study-permits",
-    img: "/images/services/study-permits.png",
+    img: "/images/services/study-permits.jpg",
     blurb:
       "Apoyo en admisiones, armado de documentos y cartas de intención que convencen.",
   },
   {
     title: "Visas de Trabajo",
     href: "/services/work-visas",
-    img: "/images/services/work-visas.png",
+    img: "/images/services/work-visas.jpg",
     blurb:
       "Patrocinios, puntajes, LMIA y transiciones de estatus con mínima fricción.",
   },
   {
     title: "Patrocinio Familiar",
     href: "/services/family-sponsorship",
-    img: "/images/services/family.png",
+    img: "/images/services/family.jpg",
     blurb:
       "Esposo(a), pareja, dependientes y padres con evidencia sólida y organizada.",
   },
   {
     title: "Inmigración de Negocios",
     href: "/services/business",
-    img: "/images/services/business.png",
+    img: "/images/services/business.jpg",
     blurb:
       "Estrategias para emprender, invertir, startups y expansión internacional.",
   },
   {
     title: "Ciudadanía y Naturalización",
     href: "/services/citizenship",
-    img: "/images/services/citizenship.png",
+    img: "/images/services/citizenship.jpg",
     blurb:
       "Revisión de elegibilidad, preparación de examen y presentación sin estrés.",
   },
   {
     title: "Preparación de Documentos",
     href: "/services/document-prep",
-    img: "/images/services/documents.png",
+    img: "/images/services/documents.jpg",
     blurb:
       "Cartas de explicación (LOE), traducciones, affidávits y copias certificadas.",
   },
   {
     title: "Seguimiento y Apelaciones",
     href: "/services/tracking-appeals",
-    img: "/images/services/appeals.png",
+    img: "/images/services/appeals.jpg",
     blurb:
       "Notas GCMS, respuestas por justicia procesal y apelaciones bien fundamentadas.",
   },
@@ -216,7 +216,7 @@ export default function Home() {
               con estrategia rigurosa, documentos impecables y comunicación transparente.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/contact" className="inline-flex items-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white shadow hover:bg-zinc-800">
+              <Link href="https://wa.link/63d0he" className="inline-flex items-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white shadow hover:bg-zinc-800">
                 Solicitar evaluación gratuita
               </Link>
               <Link href="#services" className="inline-flex items-center rounded-xl border border-zinc-300 px-5 py-3 text-sm font-semibold hover:bg-zinc-50">
@@ -398,13 +398,6 @@ export default function Home() {
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               <div className="rounded-xl border border-zinc-100 p-4">
-                <p className="text-sm text-zinc-500">Acreditaciones</p>
-                <div className="mt-2 flex items-center gap-3">
-                  <img src="/images/partners/google-partner.png" className="h-8 w-auto" alt="Insignia de socio (ejemplo)" />
-                  <img src="/images/partners/meta-partner.png" className="h-8 w-auto" alt="Insignia de socio (ejemplo)" />
-                </div>
-              </div>
-              <div className="rounded-xl border border-zinc-100 p-4">
                 <p className="text-sm text-zinc-500">Idiomas</p>
                 <p className="mt-2 font-medium">Español • Inglés</p>
               </div>
@@ -420,23 +413,6 @@ export default function Home() {
             <div className="flex items-center gap-3">
               <img src="/images/logo-mark.png" alt="Isotipo" className="h-8 w-8" />
               <span className="text-lg font-bold">Tu Angel Migratorio</span>
-            </div>
-            <nav className="flex flex-wrap gap-4 text-sm">
-              <Link href="/case-studies" className="hover:underline">Casos de éxito</Link>
-              <Link href="/approach" className="hover:underline">Proceso</Link>
-              <Link href="/pricing" className="hover:underline">Precios</Link>
-              <Link href="/about-us" className="hover:underline">Nosotros</Link>
-              <Link href="/blog" className="hover:underline">Blog</Link>
-              <Link href="/contact" className="hover:underline">Contacto</Link>
-            </nav>
-          </div>
-
-          <div className="mt-8 flex flex-wrap items-center justify-between gap-4 text-xs text-zinc-500">
-            <div className="flex gap-4">
-              <Link href="/privacy" className="hover:underline">Política de Privacidad</Link>
-              <Link href="/security" className="hover:underline">Seguridad</Link>
-              <Link href="/terms-of-use" className="hover:underline">Términos de Uso</Link>
-              <Link href="/cookie-policy" className="hover:underline">Política de Cookies</Link>
             </div>
             <p>© {new Date().getFullYear()} Tu Angel Migratorio. Todos los derechos reservados.</p>
           </div>
