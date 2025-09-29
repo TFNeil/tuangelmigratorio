@@ -123,7 +123,7 @@ function CookieBanner() {
           </button>
           <button
             onClick={() => setOpen(false)}
-            className="rounded-lg bg-black px-3 py-1.5 text-sm font-medium text-white hover:bg-zinc-800"
+            className="rounded-lg bg-brand-primary px-3 py-1.5 text-sm font-medium text-white hover:bg-brand-primary/90"
           >
             Aceptar todo
           </button>
@@ -139,7 +139,7 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
     <div className="fixed inset-0 z-50 bg-white/90 backdrop-blur-sm">
       <div className="mx-auto max-w-5xl p-6">
         <div className="mb-6 flex items-center justify-between">
-          <span className="text-lg font-semibold">Tu Angel Migratorio</span>
+          <img src="/images/brand/logo-horizontal.png" alt="Tu Ángel Migratorio" className="h-6 w-auto"/>
           <button aria-label="Cerrar menú" onClick={onClose} className="rounded-lg p-2 hover:bg-zinc-100">✕</button>
         </div>
         <nav className="grid gap-3 text-lg">
@@ -147,7 +147,7 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
           <Link href="#approach" onClick={onClose} className="rounded-lg px-3 py-2 hover:bg-zinc-100">Proceso</Link>
           <Link href="#results" onClick={onClose} className="rounded-lg px-3 py-2 hover:bg-zinc-100">Resultados</Link>
           <Link href="#about" onClick={onClose} className="rounded-lg px-3 py-2 hover:bg-zinc-100">Nosotros</Link>
-          <Link href="/contact" className="mt-2 inline-flex w-fit items-center justify-center rounded-xl bg-amber-500 px-4 py-2 font-semibold text-white shadow hover:bg-amber-600">Contacto</Link>
+          <Link href="/contact" className="mt-2 inline-flex w-fit items-center justify-center rounded-xl bg-brand-yellow px-4 py-2 font-semibold text-[#272e44] shadow hover:bg-[#d9aa3d]">Contacto</Link>
         </nav>
       </div>
     </div>
@@ -157,7 +157,7 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
 function Check({ label }: { label: string }) {
   return (
     <div className="flex items-center gap-2">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-600"><path d="M20 6L9 17l-5-5"/></svg>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-blue"><path d="M20 6L9 17l-5-5"/></svg>
       <span className="text-sm font-semibold text-zinc-800">{label}</span>
     </div>
   );
@@ -178,15 +178,21 @@ export default function Home() {
       <header className="sticky top-0 z-40 border-b border-zinc-100 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-extrabold tracking-tight">Tu Angel Migratorio</span>
+            <img
+              src="/images/brand/logo-horizontal.png"
+              alt="Tu Ángel Migratorio"
+              className="h-8 w-auto"
+            />
+            <span className="sr-only">Tu Ángel Migratorio</span>
             <Tag>Inmigración • Visas • Consultoría</Tag>
           </Link>
+
           <nav className="hidden items-center gap-6 md:flex">
-            <Link href="#services" className="text-sm font-medium hover:text-amber-600">Servicios</Link>
-            <Link href="#about" className="text-sm font-medium hover:text-amber-600">Nosotros</Link>
+            <Link href="#services" className="text-sm font-medium hover:text-brand-blue">Servicios</Link>
+            <Link href="#about" className="text-sm font-medium hover:text-brand-blue">Nosotros</Link>
             <Link
               href="#contacto"
-              className="inline-flex items-center rounded-xl bg-amber-500 px-4 py-2 text-sm font-semibold text-white shadow hover:bg-amber-600"
+              className="inline-flex items-center rounded-xl bg-brand-yellow px-4 py-2 text-sm font-semibold text-[#272e44] shadow hover:bg-[#d9aa3d]"
             >
               Contacto
             </Link>
@@ -203,21 +209,21 @@ export default function Home() {
 
       {/* HERO */}
       <section className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_left,rgba(251,191,36,0.18),transparent_45%),radial-gradient(ellipse_at_bottom_right,rgba(59,130,246,0.12),transparent_45%)]"></div>
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-hero-brand"></div>
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-              Asesoría migratoria <span className="text-amber-600">precisa</span> y orientada a <span className="text-amber-600">resultados</span>
+              Asesoría migratoria <span className="text-brand-yellow">precisa</span> y orientada a <span className="text-brand-yellow">resultados</span>
             </h1>
             <p className="mt-4 max-w-xl text-lg text-zinc-600">
               Ayudamos a solicitantes y familias a lograr permisos de estudio, trabajo y residencia
               con estrategia rigurosa, documentos impecables y comunicación transparente.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="https://wa.link/63d0he" className="inline-flex items-center rounded-xl bg-black px-5 py-3 text-sm font-semibold text-white shadow hover:bg-zinc-800">
+              <Link href="https://wa.link/63d0he" className="inline-flex items-center rounded-xl bg-brand-primary px-5 py-3 text-sm font-semibold text-white shadow hover:bg-brand-primary/90">
                 Solicitar evaluación gratuita
               </Link>
-              <Link href="#services" className="inline-flex items-center rounded-xl border border-zinc-300 px-5 py-3 text-sm font-semibold hover:bg-zinc-50">
+              <Link href="#services" className="inline-flex items-center rounded-xl border border-zinc-300 px-5 py-3 text-sm font-semibold hover:bg-zinc-50 hover:text-brand-blue">
                 Ver servicios
               </Link>
             </div>
@@ -298,12 +304,12 @@ export default function Home() {
       </section>
 
       {/* CTA RÁPIDA */}
-      <section className="border-y border-zinc-100 bg-amber-50/60 py-12">
+      <section className="border-y border-zinc-100 bg-yellow-tint py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-6 md:grid-cols-3">
             <h2 className="text-2xl font-bold md:col-span-2">Hablemos de tu plan migratorio</h2>
             <div className="md:text-right">
-              <Link href="#contacto" className="inline-flex items-center rounded-xl bg-amber-500 px-5 py-3 font-semibold text-white shadow hover:bg-amber-600">
+              <Link href="#contacto" className="inline-flex items-center rounded-xl bg-brand-primary px-5 py-3 font-semibold text-white shadow hover:bg-brand-primary/90">
                 Contáctanos
               </Link>
             </div>
@@ -314,7 +320,7 @@ export default function Home() {
       {/* SERVICIOS */}
       <section id="services" className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">Qué hacemos</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-brand-yellow">Qué hacemos</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight">Servicios integrales de inmigración</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {servicios.map((s) => (
@@ -331,7 +337,7 @@ export default function Home() {
           <div className="mt-10 flex justify-center">
             <Link
               href="https://wa.link/63d0he"
-              className="inline-flex items-center rounded-lg bg-black px-6 py-3 text-sm font-semibold text-white hover:bg-zinc-800"
+              className="inline-flex items-center rounded-lg bg-brand-primary px-6 py-3 text-sm font-semibold text-white hover:bg-brand-primary/90"
             >
               Escribenos Ya
             </Link>
@@ -350,7 +356,7 @@ export default function Home() {
             <div>
               <blockquote className="text-xl font-semibold">“Estábamos abrumados por los requisitos. Tu Angel Migratorio convirtió nuestro caso en una historia clara y convincente — y nos aprobaron.”</blockquote>
               <p className="mt-2 text-sm text-zinc-600">Laura G. — Permiso de estudio (tras 1 negativa)</p>
-              <Link href="/case-studies" className="mt-2 inline-block text-sm text-zinc-900 underline underline-offset-4 hover:text-amber-600">
+              <Link href="/case-studies" className="mt-2 inline-block text-sm text-zinc-900 underline underline-offset-4 hover:text-brand-blue">
                 Ver más casos de éxito
               </Link>
             </div>
@@ -374,109 +380,109 @@ export default function Home() {
       </section>
 
       {/* CONTACTO — Card centrada con redes a la izquierda y contacto directo a la derecha */}
-<section id="contacto" className="px-4 py-16 sm:px-6 lg:px-8">
-  <div className="mx-auto max-w-5xl">
-    <div className="rounded-2xl border border-zinc-100 bg-white p-6 shadow-sm">
-      <div className="grid gap-8 md:grid-cols-2">
-        {/* Izquierda: Redes sociales (vertical) */}
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
-            Síguenos
-          </p>
-          <ul className="mt-4 flex flex-col gap-3">
-            <li>
-              <Link
-                href="https://www.facebook.com/tuangelmigratorio"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-between rounded-xl border border-zinc-100 px-3 py-2 hover:bg-zinc-50"
-                aria-label="Facebook de Tu Angel Migratorio"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-sm font-bold text-white">f</span>
-                  <span className="flex flex-col leading-tight">
-                    <span className="font-medium">Facebook</span>
-                    <span className="text-xs text-zinc-500">@tuangelmigratorio</span>
-                  </span>
-                </span>
-                <svg width="18" height="18" viewBox="0 0 24 24" className="opacity-60 group-hover:opacity-100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://www.instagram.com/tuangelmigratorio"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-between rounded-xl border border-zinc-100 px-3 py-2 hover:bg-zinc-50"
-                aria-label="Instagram de Tu Angel Migratorio"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-xs font-bold text-white">IG</span>
-                  <span className="flex flex-col leading-tight">
-                    <span className="font-medium">Instagram</span>
-                    <span className="text-xs text-zinc-500">@tuangelmigratorio</span>
-                  </span>
-                </span>
-                <svg width="18" height="18" viewBox="0 0 24 24" className="opacity-60 group-hover:opacity-100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="https://www.tiktok.com/@tuangelmigratorio"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-between rounded-xl border border-zinc-100 px-3 py-2 hover:bg-zinc-50"
-                aria-label="TikTok de Tu Angel Migratorio"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-full bg-black text-xs font-bold text-white">TT</span>
-                  <span className="flex flex-col leading-tight">
-                    <span className="font-medium">TikTok</span>
-                    <span className="text-xs text-zinc-500">@tuangelmigratorio</span>
-                  </span>
-                </span>
-                <svg width="18" height="18" viewBox="0 0 24 24" className="opacity-60 group-hover:opacity-100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-              </Link>
-            </li>
-          </ul>
-        </div>
+      <section id="contacto" className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-5xl">
+          <div className="rounded-2xl border border-zinc-100 bg-white p-6 shadow-sm">
+            <div className="grid gap-8 md:grid-cols-2">
+              {/* Izquierda: Redes sociales (vertical) */}
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wider text-brand-yellow">
+                  Síguenos
+                </p>
+                <ul className="mt-4 flex flex-col gap-3">
+                  <li>
+                    <Link
+                      href="https://www.facebook.com/tuangelmigratorio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-between rounded-xl border border-zinc-100 px-3 py-2 hover:bg-zinc-50"
+                      aria-label="Facebook de Tu Angel Migratorio"
+                    >
+                      <span className="flex items-center gap-3">
+                        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-primary text-sm font-bold text-white">f</span>
+                        <span className="flex flex-col leading-tight">
+                          <span className="font-medium">Facebook</span>
+                          <span className="text-xs text-zinc-500">@tuangelmigratorio</span>
+                        </span>
+                      </span>
+                      <svg width="18" height="18" viewBox="0 0 24 24" className="opacity-60 group-hover:opacity-100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="https://www.instagram.com/tuangelmigratorio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-between rounded-xl border border-zinc-100 px-3 py-2 hover:bg-zinc-50"
+                      aria-label="Instagram de Tu Angel Migratorio"
+                    >
+                      <span className="flex items-center gap-3">
+                        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-primary text-xs font-bold text-white">IG</span>
+                        <span className="flex flex-col leading-tight">
+                          <span className="font-medium">Instagram</span>
+                          <span className="text-xs text-zinc-500">@tuangelmigratorio</span>
+                        </span>
+                      </span>
+                      <svg width="18" height="18" viewBox="0 0 24 24" className="opacity-60 group-hover:opacity-100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="https://www.tiktok.com/@tuangelmigratorio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center justify-between rounded-xl border border-zinc-100 px-3 py-2 hover:bg-zinc-50"
+                      aria-label="TikTok de Tu Angel Migratorio"
+                    >
+                      <span className="flex items-center gap-3">
+                        <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-primary text-xs font-bold text-white">TT</span>
+                        <span className="flex flex-col leading-tight">
+                          <span className="font-medium">TikTok</span>
+                          <span className="text-xs text-zinc-500">@tuangelmigratorio</span>
+                        </span>
+                      </span>
+                      <svg width="18" height="18" viewBox="0 0 24 24" className="opacity-60 group-hover:opacity-100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
 
-        {/* Derecha: Teléfono y correo */}
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
-            Contacto directo
-          </p>
-          <div className="mt-4 grid gap-3">
-            <a
-              href="tel:+16045550134"
-              className="flex items-center gap-3 rounded-xl border border-zinc-100 px-3 py-3 hover:bg-zinc-50"
+              {/* Derecha: Teléfono y correo */}
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wider text-brand-yellow">
+                  Contacto directo
+                </p>
+                <div className="mt-4 grid gap-3">
+                  <a
+                    href="tel:+16045550134"
+                    className="flex items-center gap-3 rounded-xl border border-zinc-100 px-3 py-3 hover:bg-zinc-50"
+                  >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.86.32 1.7.59 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.11a2 2 0 0 1 2.11-.45c.8.27 1.64.47 2.5.59A2 2 0 0 1 22 16.92z"/></svg>
+                    <span className="font-medium">+1 (604) 555-0134</span>
+                  </a>
+                  <a
+                    href="mailto:hola@tuangelmigratorio.com"
+                    className="flex items-center gap-3 rounded-xl border border-zinc-100 px-3 py-3 hover:bg-zinc-50"
+                  >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+                    <span className="font-medium">hola@tuangelmigratorio.com</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Botón fuera de la card */}
+          <div className="mt-6 flex justify-center">
+            <Link
+              href="https://wa.link/63d0he"
+              className="inline-flex items-center rounded-xl bg-brand-primary px-6 py-3 font-semibold text-white shadow hover:bg-brand-primary/90"
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.86.32 1.7.59 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.11a2 2 0 0 1 2.11-.45c.8.27 1.64.47 2.5.59A2 2 0 0 1 22 16.92z"/></svg>
-              <span className="font-medium">+1 (604) 555-0134</span>
-            </a>
-            <a
-              href="mailto:hola@tuangelmigratorio.com"
-              className="flex items-center gap-3 rounded-xl border border-zinc-100 px-3 py-3 hover:bg-zinc-50"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
-              <span className="font-medium">hola@tuangelmigratorio.com</span>
-            </a>
+              ¡Escríbenos al WhatsApp ya!
+            </Link>
           </div>
         </div>
-      </div>
-    </div>
-
-    {/* Botón fuera de la card */}
-    <div className="mt-6 flex justify-center">
-      <Link
-        href="https://wa.link/63d0he"
-        className="inline-flex items-center rounded-xl bg-black px-6 py-3 font-semibold text-white shadow hover:bg-zinc-800"
-      >
-        ¡Escríbenos al WhatsApp ya!
-      </Link>
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* NOSOTROS + SELLOS */}
       <section id="about" className="px-4 py-16 sm:px-6 lg:px-8">
@@ -505,8 +511,8 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <img src="/images/logo-mark.png" alt="Isotipo" className="h-8 w-8" />
-              <span className="text-lg font-bold">Tu Angel Migratorio</span>
+              <img src="/images/brand/logo-horizontal.png" alt="Tu Ángel Migratorio" className="h-8 w-auto" />
+              <span className="sr-only">Tu Ángel Migratorio</span>
             </div>
             <p>© {new Date().getFullYear()} Tu Angel Migratorio. Todos los derechos reservados.</p>
           </div>

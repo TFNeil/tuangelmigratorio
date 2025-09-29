@@ -1,17 +1,41 @@
 @import "tailwindcss";
 
+/* =============== */
+/* Brand Variables */
+/* =============== */
 :root {
+  /* Core palette (Light) */
+  --brand-primary: #272e44;  /* Gunmetal */
+  --brand-blue:    #45739c;  /* Queen Blue */
+  --brand-accent:  #e34345;  /* Carmine Pink (use sparingly) */
+  --brand-yellow:  #e5ba4a;  /* Maximum Yellow Red */
+
+  /* Neutral surface/text */
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Optional subtle tints */
+  --tint-yellow-10: color-mix(in srgb, var(--brand-yellow) 12%, transparent);
+  --tint-blue-10:   color-mix(in srgb, var(--brand-blue) 10%, transparent);
 }
 
+/* Tailwind v4-style theme tokens mapped to CSS variables */
 @theme inline {
+  /* Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-blue:    var(--brand-blue);
+  --color-brand-accent:  var(--brand-accent);
+  --color-brand-yellow:  var(--brand-yellow);
+
+  /* Fonts */
+  --font-sans: "Filson Soft", ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+/* If you ever enable dark mode later, you can tweak here. For now, keep site light. */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -19,8 +43,55 @@
   }
 }
 
-body {
+/* ========================= */
+/* Brand Typeface: Filson Soft
+   (Add actual font files to:
+   public/fonts/filson-soft/ )
+   ========================= */
+@font-face {
+  font-family: "Filson Soft";
+  src:
+    url("/fonts/filson-soft/FilsonSoft-Regular.woff2") format("woff2"),
+    url("/fonts/filson-soft/FilsonSoft-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Filson Soft";
+  src:
+    url("/fonts/filson-soft/FilsonSoft-Semibold.woff2") format("woff2"),
+    url("/fonts/filson-soft/FilsonSoft-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+/* Add Bold/Italic faces if you have them */
+
+/* ============== */
+/* Base Elements  */
+/* ============== */
+html, body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Utility helpers (optional) */
+.bg-hero-brand {
+  /* Soft brandy radial gradient that matches your current layout */
+  background:
+    radial-gradient(
+      ellipse at top left,
+      color-mix(in srgb, var(--brand-yellow) 18%, transparent),
+      transparent 45%
+    ),
+    radial-gradient(
+      ellipse at bottom right,
+      color-mix(in srgb, var(--brand-blue) 12%, transparent),
+      transparent 45%
+    );
+}
+.bg-yellow-tint {
+  background: var(--tint-yellow-10);
 }
