@@ -100,39 +100,6 @@ function Tag({ children }: { children: React.ReactNode }) {
   );
 }
 
-function CookieBanner() {
-  const [open, setOpen] = useState(true);
-  if (!open) return null;
-  return (
-    <div
-      role="region"
-      aria-label="Consentimiento de cookies"
-      className="fixed inset-x-3 bottom-3 z-50 rounded-xl border border-zinc-200 bg-white p-4 shadow-lg"
-    >
-      <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-zinc-700">
-          Usamos cookies para mejorar tu navegación, analizar el tráfico y personalizar
-          contenido. Puedes aceptar o gestionar tus preferencias.
-        </p>
-        <div className="flex gap-2">
-          <button
-            onClick={() => setOpen(false)}
-            className="rounded-lg border border-zinc-300 px-3 py-1.5 text-sm font-medium text-zinc-800 hover:bg-zinc-100"
-          >
-            Gestionar
-          </button>
-          <button
-            onClick={() => setOpen(false)}
-            className="rounded-lg bg-brand-primary px-3 py-1.5 text-sm font-medium text-white hover:bg-brand-primary/90"
-          >
-            Aceptar todo
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
   if (!open) return null;
   return (
@@ -169,7 +136,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white text-zinc-900">
-      <CookieBanner />
       <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
 
       {/* NAVBAR */}
