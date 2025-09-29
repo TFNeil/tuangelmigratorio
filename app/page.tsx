@@ -144,8 +144,6 @@ function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
         </div>
         <nav className="grid gap-3 text-lg">
           <Link href="#services" onClick={onClose} className="rounded-lg px-3 py-2 hover:bg-zinc-100">Servicios</Link>
-          <Link href="#approach" onClick={onClose} className="rounded-lg px-3 py-2 hover:bg-zinc-100">Proceso</Link>
-          <Link href="#results" onClick={onClose} className="rounded-lg px-3 py-2 hover:bg-zinc-100">Resultados</Link>
           <Link href="#about" onClick={onClose} className="rounded-lg px-3 py-2 hover:bg-zinc-100">Nosotros</Link>
           <Link href="/contact" className="mt-2 inline-flex w-fit items-center justify-center rounded-xl bg-brand-yellow px-4 py-2 font-semibold text-[#272e44] shadow hover:bg-[#d9aa3d]">Contacto</Link>
         </nav>
