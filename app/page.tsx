@@ -392,7 +392,7 @@ export default function Home() {
                   </li>
                   <li>
                     <Link
-                      href="https://www.tiktok.com/@tuangelmigratorio"
+                      href="https://www.tiktok.com/@angelmigratorio_usa"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group flex items-center justify-between rounded-xl border border-zinc-100 px-3 py-2 hover:bg-zinc-50"
@@ -402,7 +402,7 @@ export default function Home() {
                         <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-primary text-xs font-bold text-white">TT</span>
                         <span className="flex flex-col leading-tight">
                           <span className="font-medium">TikTok</span>
-                          <span className="text-xs text-zinc-500">@tuangelmigratorio</span>
+                          <span className="text-xs text-zinc-500">@angelmigratorio_usa</span>
                         </span>
                       </span>
                       <svg width="18" height="18" viewBox="0 0 24 24" className="opacity-60 group-hover:opacity-100" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
@@ -422,14 +422,14 @@ export default function Home() {
                     className="flex items-center gap-3 rounded-xl border border-zinc-100 px-3 py-3 hover:bg-zinc-50"
                   >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.12.86.32 1.7.59 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.11a2 2 0 0 1 2.11-.45c.8.27 1.64.47 2.5.59A2 2 0 0 1 22 16.92z"/></svg>
-                    <span className="font-medium">+1 (604) 555-0134</span>
+                    <span className="font-medium">+1 (916) 704-5825</span>
                   </a>
                   <a
                     href="mailto:hola@tuangelmigratorio.com"
                     className="flex items-center gap-3 rounded-xl border border-zinc-100 px-3 py-3 hover:bg-zinc-50"
                   >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
-                    <span className="font-medium">hola@tuangelmigratorio.com</span>
+                    <span className="font-medium">contacto@angel-migratorio.com</span>
                   </a>
                 </div>
               </div>
