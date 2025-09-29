@@ -177,7 +177,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div>
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-              Asesoría migratoria <span className="text-brand-yellow">precisa</span> y orientada a <span className="text-brand-yellow">resultados</span>
+              Evaluación migratoria <span className="text-brand-yellow">precisa</span> y orientada a <span className="text-brand-yellow">resultados</span>
             </h1>
             <p className="mt-4 max-w-xl text-lg text-zinc-600">
               Ayudamos a solicitantes y familias a lograr permisos de estudio, trabajo y residencia
